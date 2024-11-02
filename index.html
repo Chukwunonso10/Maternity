@@ -1,20 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="chukwnnonso Kuzue"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="x-uA-compatible" content="IE-edge">
+    <title>{% block maternity %} {% endblock maternity %}</title>
+    <link rel="stylesheet" href="{% static 'Health_Tracker/css/styles.css' %}">
+</head>
+<body>
+    <header class="container">
+        <h1 class="welcome Dashboard Metrics"></h1>
+            <nav>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="UserRegistration.html">Registration Page</a>
+                <a href="Analysis.html">Analysis</a>
+                <a href="CheckUp.html">CheckUp</a>
+                <a href="symptoms.html">Symptoms</a>
+                <a href="about_us.html">My Team</a>
+                
+            </nav>
+    </header>
+<body>
+    <nav class="navbar">
+        <a href="dashboard.html">HealthAI</a>
+        <div>
+            <ul>
+                <li><a href="#">{{ user.username }}</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<main>
-<h2>Login</h2>
-<form class="forms" action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" autocomplete="on" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" autocomplete="on" required>
-    <br>
-    <button type="submit">Login</button>
-</form>
-{% endblock main%}
+    <!-- Welcome Section -->
+    <div>
+        <h1>Welcome, Chukwunonso
+        <p>Your health insights at your fingertips.</p>
+    </div>
 
-{% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-warning">{{ message }}</div>
-    {% endfor %}
-{% endif %}
+    <!-- Notifications -->
+    <div>
+                
+        <p>message</p>
+    
+
+    <div>
+        <a href="add_symptom.html">Add Symptoms</a>
+    </div>
+
+    <section>
+        <h2>Your Symptoms</h2>
+        <ul>
+                <li>No symptoms logged yet.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Recent Health Recommendations</h2>
+        <ul>
+                <li>No recommendations available.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Estimated Due Date (EDD)</h3>
+            <p>Your estimated due date is: {{ edd }}</p>
+        {% else %}
+            <p>Please update your Last Menstrual Period (LMP) for EDD calculation.</p>
+    </section>
+
+    <div>
+        <h3>Recent Analysis</h3>
+        <hr>
+        {% if recent_symptoms %}
+            <ul>
+                {% for symptom in recent_symptoms %}
+                    <li>
+                        <h5>{{ symptom.date_logged }} - {{ symptom.symptoms }}</h5>
+                        <p><strong>AI Recommendation:</strong> {{ symptom.analysisresults.results }}</p>
+                        <small>Analyzed on {{ symptom.analysisresults.created_at }}</small>
+                    </li>
+            </ul>
+
+            <p>No recent activity available.</p>
+    </div>
+    
+    <!-- Notifications Section -->
+    <section>
+        <h3>Notifications</h3>
+            <ul>
+            
+            </ul>
+        
+            <p>No new notifications.</p>
+        
+        <a href="notifications.html">View All Notifications</a>
+        
+    </section>
+    <section class="team-member"><img src="images/maternal_health_dashboard_black.jpeg" alt="chukwunonso" height="350" width="1080"></>
+    </body>
