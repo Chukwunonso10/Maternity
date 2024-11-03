@@ -12,15 +12,15 @@
 <body>
     <header class="container">
         <h1 class="welcome">{% block h1 %} {% endblock h1 %}</h1>
-            <nav>
-                <a href="{% url 'dashboard' %}">Dashboard</a>
-                <a href="{% url 'UserRegistration' %}">Registration Page</a>
-                <a href="{% url 'Analysis' symptom_id=1 %}">Analysis</a>
-                <a href="{% url 'CheckUp' %}">CheckUp</a>
-                <a href="{% url 'symptoms' %}">Symptoms</a>
-                <a href="{% url 'about_us' %}">My Team</a>
-                
-            </nav>
+        <nav>
+            <a href="Analysis.html"><a href="Analysis"></a>
+            <a href="CheckUp.html"><a href="CheckUp"></a>
+            <a href="login.html"><a href="Login Page"></a>
+            <a href="Symptoms.html"><a href="Symptoms"></a>
+            <a href="index.html"><a href="Dashboard"></a>
+            <a href="about_us.html"><a href="My Team"></a>
+            <a href="UserRegistration.html"><a href="Registration page"></a>
+        </nav>
     </header>
     {% block main%}
 

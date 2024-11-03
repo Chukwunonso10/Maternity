@@ -1,8 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="chukwnnonso Kuzue"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="x-uA-compatible" content="IE-edge">
+    <title>{% block maternity %} {% endblock maternity %}</title>
+    <link rel="stylesheet" href="{% static 'Health_Tracker/css/styles.css' %}">
+</head>
+<body>
+    <header class="container">
+        <h1 class="welcome">{% block h1 %} {% endblock h1 %}</h1>
+        <nav>
+            <a href="Analysis.html"><a href="Analysis"></a>
+            <a href="CheckUp.html"><a href="CheckUp"></a>
+            <a href="login.html"><a href="Login Page"></a>
+            <a href="Symptoms.html"><a href="Symptoms"></a>
+            <a href="index.html"><a href="Dashboard"></a>
+            <a href="about_us.html"><a href="My Team"></a>
+            <a href="UserRegistration.html"><a href="Registration page"></a>
+        </nav>
+    </header>
 <main>
 <h2>Login</h2>
-<form class="forms" action="{% url 'login' %}" method="post">
-    {% csrf_token %}
+<form class="forms" action="login" method="post">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" autocomplete="on" required>
     <br>
@@ -11,7 +33,6 @@
     <br>
     <button type="submit">Login</button>
 </form>
-{% endblock main%}
 
 {% if messages %}
     {% for message in messages %}
@@ -19,7 +40,7 @@
     {% endfor %}
 {% endif %}
 <footer><p class="fff">&copy; copyright 2024 | Marternity Health App | powered by 3MTT| <a href="#">support</a>|<a href="#">Terms of Services</a></p>
-    <div><a href="#">BACK TO TOP</a><a href="{% url 'logout' %}">Sign out</a></div>   
+    <div><a href="#">BACK TO TOP</a><a href="#logout">Sign out</a></div>   
     </footer>
 </body>
 </html>
