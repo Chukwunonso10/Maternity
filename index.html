@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="30">
     <meta http-equiv="x-uA-compatible" content="IE-edge">
-    <title>Dashboard</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="container">
-        <h1 class="welcome Dashboard Metrics"></h1>
+        <h1 class="welcome">Login Page</h1>
         <nav>
             <a href="login.html">Login Page</a>
             <a href="UserRegistration.html">Sign Up</a>
@@ -23,86 +24,37 @@
             
         </nav>
     </header>
-<body>
-    <nav class="navbar">
-        <a href="dashboard.html">HealthAI</a>
-        <div>
-            <ul>
-                <li><a href="#">{{ user.username }}</a></li>
-                <li><a href="logout.html">Logout</a></li>
-            </ul>
+    <h2 class="heading">LOGIN FORM</h2>
+    <button onclick="document.getElementById('all').style.display='block'" style="width:auto;">Login</button>
+    
+    <div class="entire animate" id="all">
+        <form action="/action_page.php" method="post" class="form_content">
+            <div class="imgcontainer">
+                <span class="close">&times;</span>
+                <img src="images/Avatar2048x2048.jpg" alt="profile_Avatar" class="avatar">
+            </div >
+            <div class=form_container>
+                <p><label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </p>
+            <p><label for="password">password</label>
+                <input type="password" id="Password" name="password">
+            </p>
+            <p>
+                <button type="submit" class="login">Login</button>
+            </p><br>
+            <input type="checkbox" checked id="checkbox" name="checkbox">
+            <label for="checkbox">Remember me?</label>
+            <div>
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="pass">Forgot <a href="#">password?</a> </span>
+            </div>
         </div>
-    </nav>
-
-    <!-- Welcome Section -->
-    <div>
-        <h1>Welcome, Chukwunonso
-        <p>Your health insights at your fingertips.</p>
+        </form>
     </div>
 
-    <!-- Notifications -->
-    <div>
-                
-        <p>message</p>
-    
 
-    <div>
-        <a href="add_symptom.html">Add Symptoms</a>
-    </div>
 
-    <section>
-        <h2>Your Symptoms</h2>
-        <ul>
-                <li>No symptoms logged yet.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Recent Health Recommendations</h2>
-        <ul>
-                <li>No recommendations available.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Estimated Due Date (EDD)</h3>
-            <p>Your estimated due date is: {{ edd }}</p>
-        {% else %}
-            <p>Please update your Last Menstrual Period (LMP) for EDD calculation.</p>
-    </section>
-
-    <div>
-        <h3>Recent Analysis</h3>
-        <hr>
-        {% if recent_symptoms %}
-            <ul>
-                {% for symptom in recent_symptoms %}
-                    <li>
-                        <h5>{{ symptom.date_logged }} - {{ symptom.symptoms }}</h5>
-                        <p><strong>AI Recommendation:</strong> {{ symptom.analysisresults.results }}</p>
-                        <small>Analyzed on {{ symptom.analysisresults.created_at }}</small>
-                    </li>
-            </ul>
-
-            <p>No recent activity available.</p>
-    </div>
-    
-    <!-- Notifications Section -->
-    <section>
-        <h3>Notifications</h3>
-            <ul>
-            
-            </ul>
-        
-            <p>No new notifications.</p>
-        
-        <a href="notifications.html">View All Notifications</a>
-        
-    </section>
-    <section class="team-member"><img src="images/maternal_health_dashboard_black.jpeg" alt="chukwunonso" height="350" width="1080"></>
-    </body>
-    <footer><p class="fff">&copy; copyright 2024 | Marternity Health App | powered by 3MTT| <a href="#">support</a>|<a href="#">Terms of Services</a></p>
-        <div><a href="#">BACK TO TOP</a><a href="{% url 'logout' %}">Sign out</a></div>   
-        </footer>
-    </body>
-    </html>
+    <script src="main.js"></script>
+</body>
+</html>
