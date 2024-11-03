@@ -7,40 +7,54 @@
     <meta http-equiv="refresh" content="30">
     <meta http-equiv="x-uA-compatible" content="IE-edge">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="container">
-        <h1 class="welcome">login Page</h1>
+        <h1 class="welcome">Login Page</h1>
         <nav>
+            <a href="login.html">Login Page</a>
+            <a href="UserRegistration.html">Sign Up</a>
+            <a href="index.html">Dashboard</a>
+            <a href="Symptoms.html">Symptoms</a>
             <a href="Analysis.html">Analysis</a>
             <a href="CheckUp.html">CheckUp</a>
-            <a href="login.html">Login Page</a>
-            <a href="Symptoms.html">Symptoms</a>
-            <a href="index.html">Dashboard</a>
             <a href="about_us.html">My Team</a>
-            <a href="UserRegistration.html">Registration page</a>
+            
         </nav>
     </header>
-<main>
-<h2>Login</h2>
-<form class="forms" action="login" method="post">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" autocomplete="on" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" autocomplete="on" required>
-    <br>
-    <button type="submit">Login</button>
-</form>
+    <h2 class="heading">LOGIN FORM</h2>
+    <button onclick="document.getElementById('all').style.display='block'" style="width:auto;">Login</button>
+    
+    <div class="entire animate" id="all">
+        <form action="/action_page.php" method="post" class="form_content">
+            <div class="imgcontainer">
+                <span class="close">&times;</span>
+                <img src="images/Avatar2048x2048.jpg" alt="profile_Avatar" class="avatar">
+            </div >
+            <div class=form_container>
+                <p><label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </p>
+            <p><label for="password">password</label>
+                <input type="password" id="Password" name="password">
+            </p>
+            <p>
+                <button type="submit" class="login">Login</button>
+            </p><br>
+            <input type="checkbox" checked id="checkbox" name="checkbox">
+            <label for="checkbox">Remember me?</label>
+            <div>
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="pass">Forgot <a href="#">password?</a> </span>
+            </div>
+        </div>
+        </form>
+    </div>
 
-{% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-warning">{{ message }}</div>
-    {% endfor %}
-{% endif %}
-<footer><p class="fff">&copy; copyright 2024 | Marternity Health App | powered by 3MTT| <a href="#">support</a>|<a href="#">Terms of Services</a></p>
-    <div><a href="#">BACK TO TOP</a><a href="#logout">Sign out</a></div>   
-    </footer>
+
+
+    <script src="main.js"></script>
 </body>
 </html>
