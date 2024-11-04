@@ -15,7 +15,7 @@
 
         <nav>
             <a href="index.html">Login Page</a>
-            <a href="UserRegistration.html">Sign Up</a>
+            <!-- git -->
             <a href="dashboard.html">Dashboard</a>
             <a href="Symptoms.html">Symptoms</a>
             <a href="Analysis.html">Analysis</a>
@@ -66,5 +66,50 @@
     <footer><p class="fff">&copy; copyright 2024 | Chukwunonso powered by 3MTT </p>
     <p><a href="index.html">Homepage</a></p>   
     </footer>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="document.getElementById('all').style.display='block'" style="width:auto;">Login</button>
+    <h2 class="heading">Modula login Form</h2>
+    <div class="entire animate" id="all">
+        <form action="/action_page.php" method="post" class="form_content">
+            <div class="imgcontainer">
+                <span class="close">&times;</span>
+                <img src="images/Avatar2048x2048.jpg" alt="profile_Avatar" class="avatar">
+            ls</div >
+            <div class=form_container>
+                <p><label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </p>
+            <p><label for="password">password</label>
+                <input type="password" id="Password" name="password">
+            </p>
+            <p>
+                <button type="submit" class="login">Login</button>
+            </p><br>
+            <input type="checkbox" checked id="checkbox" name="checkbox">
+            <label for="checkbox">Remember me?</label>
+            <div>
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="pass">Forgot <a href="#">password?</a> </span>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+
+    <script src="main.js"></script>
 </body>
 </html>

@@ -108,7 +108,7 @@ form textarea {
     margin-top: 5px auto;
     border: 1px solid #ced4da;
     border-radius: 4px;
-    font-size: 23px
+    font-size: 23px;
 }
 
 form input[type="text"]:focus,
@@ -212,6 +212,7 @@ a.button-link:hover {
     }
     form input[type="text"],
     form input[type="password"],
+    form input[type="email"],
     form textarea {
         font-size: 0.9rem;
     }

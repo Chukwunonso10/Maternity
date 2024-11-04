@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="30">
     <meta http-equiv="x-uA-compatible" content="IE-edge">
-    <title>Login</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,8 +14,8 @@
     <header class="container">
         <h1 class="welcome">Welcome To Maternity Hub</h1>
         <nav>
-            <a href="index.html">Login Page</a>
-            <a href="UserRegistration.html">Sign Up</a>
+            <!-- <a href="index.html">Login Page</a> -->
+          <!--   <a href="UserRegistration.html">Sign Up</a> -->
             <a href="dashboard.html">Dashboard</a>
             <a href="Symptoms.html">Symptoms</a>
             <a href="Analysis.html">Analysis</a>
@@ -24,7 +24,7 @@
             
         </nav>
     </header>
-    <h2 class="heading">LOGIN FORM</h2>
+    <h2 class="heading">Login FORM</h2>
     <button onclick="document.getElementById('all').style.display='block'" style="width:auto;">Login</button>
     
     <div class="entire animate" id="all">
@@ -42,19 +42,23 @@
             </p>
             <p>
                 <button type="submit" class="login">Login</button>
-            </p><br>
+                <div class="account"><p class="pack">Don't have an account? <a href="register.html">Sign Up</a></p>
+            <p></div>
             <input type="checkbox" checked id="checkbox" name="checkbox">
             <label for="checkbox">Remember me?</label>
+            </p>
             <div>
                 <button type="button" class="cancelbtn">Cancel</button>
                 <span class="pass">Forgot <a href="#">password?</a> </span>
             </div>
         </div>
         </form>
-    </div>
 
 
-
+    <footer><p class="fff">&copy; copyright 2024 | Marternity Health App | powered by 3MTT| <a href="#">support</a>|<a href="#">Terms of Services</a></p>
+        <div><a href="#">BACK TO Home</a><a href="index.html">Home page</a></div>   
+    </footer>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
