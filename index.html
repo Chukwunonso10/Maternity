@@ -28,28 +28,29 @@
     <button onclick="document.getElementById('all').style.display='block'" style="width:auto;">Login</button>
     
     <div class="entire animate" id="all">
-        <form action="/action_page.php" method="post" class="form_content">
+        <form class="form_content" id="loginForm">
             <div class="imgcontainer">
                 <span class="close">&times;</span>
                 <img src="images/Avatar2048x2048.jpg" alt="profile_Avatar" class="avatar">
             </div >
             <div class=form_container>
-                <p><label for="username">Username</label>
-                <input type="text" id="username" name="username">
+                <p><label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="on">
             </p>
             <p><label for="password">password</label>
-                <input type="password" id="Password" name="password">
+                <input type="password" id="password" name="password">
             </p>
             <p>
                 <button type="submit" class="login">Login</button>
-                <div class="account"><p class="pack">Don't have an account? <a href="register.html">Sign Up</a></p>
-            <p></div>
+            </p><br>
+            <div class="account">
+                <p>Don't have an account? <a href="register.html">SignUp Here</a></p>
+            </div>
             <input type="checkbox" checked id="checkbox" name="checkbox">
             <label for="checkbox">Remember me?</label>
-            </p>
             <div>
                 <button type="button" class="cancelbtn">Cancel</button>
-                <span class="pass">Forgot <a href="#">password?</a> </span>
+                <span class="pass">Forgot<a href="#">password?</a> </span>
             </div>
         </div>
         </form>

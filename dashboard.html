@@ -35,11 +35,12 @@
     </nav>
 
     <!-- Welcome Section -->
+    <div id="welcome-message"></div>
     <div>
-        <h1>Welcome, Chukwunonso
+        
         <p>Your health insights at your fingertips.</p>
     </div>
-
+    <div id="welcome-message"> </div>
     <!-- Notifications -->
     <div>
                 
@@ -104,5 +105,17 @@
     <footer><p class="fff">&copy; copyright 2024 | Marternity Health App | powered by 3MTT| <a href="#">support</a>|<a href="#">Terms of Services</a></p>
         <div><a href="#">BACK TO TOP</a><a href="{% url 'logout' %}">Sign out</a></div>   
         </footer>
+
+        <script src="main.js">
+            // Assuming registeredUser is an object that contains user details
+
+        // Check if the user is logged in and update the dashboard
+        if (registeredUser && registeredUser.email === email && registeredUser.password === password) {
+            const welcomeElement = document.getElementById('welcome-message');
+
+        // Update the content of that element with the personalized message
+            welcomeElement.innerHTML = `Welcome back, ${registeredUser.firstName}!`;
+}
+        </script>
     </body>
     </html>
